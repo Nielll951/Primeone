@@ -1,0 +1,183 @@
+@import url('https://../fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+// Mixings
+@mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0;
+}
+
+
+// Fonts
+@font-face {
+    font-family: 'Akzidenz-Grotesk BQ';
+    src: url('../fonts/AkzidenzGroteskBQ-BdCnd.eot');
+    src: url('../fonts/AkzidenzGroteskBQ-BdCnd.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AkzidenzGroteskBQ-BdCnd.woff2') format('woff2'),
+        url('../fonts/AkzidenzGroteskBQ-BdCnd.woff') format('woff'),
+        url('../fonts/AkzidenzGroteskBQ-BdCnd.ttf') format('truetype'),
+        url('../fonts/AkzidenzGroteskBQ-BdCnd.svg#AkzidenzGroteskBQ-BdCnd') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas';
+    src: url('../fonts/BebasNeue Regular.eot');
+    src: local('☺'), url('../fonts/BebasNeue Regular.woff') format('woff'), url('../fonts/BebasNeue Regular.ttf') format('truetype'), url('../fonts/BebasNeue Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+// Default font
+$fontfamily: "PT Sans";
+
+
+// Variables
+$minwidth: 320px;
+$mw: 880px;
+
+// Обнуление стилей
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside,
+section {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    min-width: $minwidth;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+
+body {
+    font-family: $fontfamily;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -moz-text-size-adjust: 100%;
+    -ms-text-side-last: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+.container {
+    max-width: $mw;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.header-top {
+    @include flexbox();
+    justify-content: space-between;
+}
+
+.header-top-lang {
+    @include flexbox();
+}
+
+.header-top-lang__item {
+    display: block;
+    line-height: 19px;
+    color: #000;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-family: Bebas;
+    letter-spacing: 1px;
+    padding: 0 4px;
+    margin-right: 10px;
+
+    &.active {
+        background-color: #000;
+        color: #fff;
+    }
+}
+
+.header-top__link {
+    font-family: 'Akzidenz-Grotesk BQ';
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 15px;
+    color: #000;
+}
