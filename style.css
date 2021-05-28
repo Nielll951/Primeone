@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url("https://../fonts.googleapis.com/css2?family=PT+Sans&display=swap");
 @font-face {
-  font-family: "AkzidenzGroteskBQ";
+  font-family: "Akzidenz-Grotesk BQ";
   src: url("../fonts/AkzidenzGroteskBQ-BdCnd.eot");
   src: url("../fonts/AkzidenzGroteskBQ-BdCnd.eot?#iefix") format("embedded-opentype"), url("../fonts/AkzidenzGroteskBQ-BdCnd.woff2") format("woff2"), url("../fonts/AkzidenzGroteskBQ-BdCnd.woff") format("woff"), url("../fonts/AkzidenzGroteskBQ-BdCnd.ttf") format("truetype"), url("../fonts/AkzidenzGroteskBQ-BdCnd.svg#AkzidenzGroteskBQ-BdCnd") format("svg");
   font-weight: bold;
@@ -129,7 +129,6 @@ h6 {
   max-width: 880px;
   margin: 0 auto;
   width: 100%;
-  padding: 0 15px;
 }
 
 .header-top {
@@ -169,7 +168,7 @@ h6 {
 }
 
 .header-top__link {
-  font-family: "AkzidenzGroteskBQ";
+  font-family: "Akzidenz-Grotesk BQ";
   text-transform: uppercase;
   text-decoration: underline;
   font-size: 15px;
@@ -226,7 +225,7 @@ h6 {
 
 .header-bottom-menu__link {
   letter-spacing: 1.5px;
-  font-family: "AkzidenzGroteskBQ";
+  font-family: "Akzidenz-Grotesk BQ";
   color: #000;
   text-transform: uppercase;
   font-size: 15px;
@@ -275,13 +274,7 @@ h6 {
   display: flex;
   font-size: 0;
   background-color: #000;
-  margin-top: 30px;
   margin-bottom: 75px;
-}
-@media (max-width: 768px) {
-  .private {
-    margin-bottom: 40px;
-  }
 }
 .private__column {
   flex: 0 0 50%;
@@ -312,7 +305,7 @@ h6 {
 }
 .private__column .private-body .private-body-content__title {
   font-size: 50px;
-  font-family: "AkzidenzGroteskBQ";
+  font-family: "Akzidenz-Grotesk BQ";
   color: white;
   text-transform: uppercase;
   line-height: 1;
@@ -328,7 +321,7 @@ h6 {
 }
 .private__column .private-body .private-body-content__text {
   font-size: 15px;
-  font-family: "PTSans", sans-serif;
+  font-family: "PT Sans", sans-serif;
   color: white;
   line-height: 1.667;
   text-align: left;
@@ -365,26 +358,6 @@ h6 {
   background-size: cover;
 }
 
-.products {
-  margin-bottom: 40px;
-}
-@media (max-width: 768px) {
-  .products {
-    margin: 0;
-  }
-}
-
-.products-item {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  font-size: 0;
-  height: 100%;
-  flex-direction: column;
-}
-
 .products-body {
   display: -webkit-box;
   display: -moz-box;
@@ -392,109 +365,6 @@ h6 {
   display: -webkit-flex;
   display: flex;
   font-size: 0;
-}
-@media (max-width: 768px) {
-  .products-body {
-    flex-wrap: wrap;
-  }
-}
-
-.products__column {
-  flex: 0 0 25%;
-  margin-bottom: 40px;
-}
-@media (max-width: 768px) {
-  .products__column {
-    flex: 0 0 50%;
-  }
-}
-@media (max-width: 380px) {
-  .products__column {
-    flex: 1 1 100%;
-  }
-}
-
-.products-item__image {
-  display: block;
-  padding: 0 0 100% 0;
-  background-repeat: no-repeat;
-  margin-bottom: 25px;
-}
-@media (max-width: 768px) {
-  .products-item__image {
-    background-size: cover;
-  }
-}
-@media (max-width: 380px) {
-  .products-item__image {
-    margin-bottom: 15px;
-  }
-}
-
-.image01 {
-  background-image: url("../img/products/01.jpg");
-}
-
-.image02 {
-  background-image: url("../img/products/02.jpg");
-}
-
-.image03 {
-  background-image: url("../img/products/03.jpg");
-}
-
-.image04 {
-  background-image: url("../img/products/04.jpg");
-}
-
-.products-item__title {
-  display: block;
-  font-size: 25px;
-  font-family: "AkzidenzGroteskBQ";
-  color: black;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  margin-bottom: 40px;
-  max-width: 180px;
-}
-@media (max-width: 380px) {
-  .products-item__title {
-    max-width: none;
-    height: auto;
-    overflow: visible;
-    margin-bottom: 20px;
-  }
-}
-
-.products-item__text {
-  flex: 1 1 auto;
-  font-size: 15px;
-  font-family: "PTSans", sans-serif;
-  color: black;
-  line-height: 1.667;
-  text-align: left;
-  margin-bottom: 35px;
-  max-width: 180px;
-}
-@media (max-width: 380px) {
-  .products-item__text {
-    max-width: none;
-    margin-bottom: 15px;
-  }
-}
-
-.products-item__btn {
-  margin-bottom: 29px;
-}
-
-.products-item__link {
-  font-size: 15px;
-  font-family: "Bebas";
-  color: black;
-  text-decoration: underline;
-  text-transform: uppercase;
-  line-height: 1.667;
-  letter-spacing: 1.5px;
 }
 
 /*# sourceMappingURL=style.css.map */
