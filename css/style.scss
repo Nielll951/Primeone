@@ -33,9 +33,17 @@
     font-style: normal;
 }
 
+// Wrapper
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+
+    &.loaded {}
+}
 
 // Default font
-$fontfamily: "PT Sans";
+$fontfamily: "PTSans";
 
 
 // Variables
@@ -43,6 +51,7 @@ $minwidth: 320px;
 $mw: 880px;
 
 // Обнуление стилей
+
 * {
     padding: 0;
     margin: 0;
@@ -142,6 +151,12 @@ h6 {
     font-weight: 400;
 }
 
+@media (max-width: 767px) {
+    .header-bottom-menu-list li {
+        margin-right: 35px;
+    }
+}
+
 .container {
     max-width: $mw;
     margin: 0 auto;
@@ -151,6 +166,7 @@ h6 {
 .header-top {
     @include flexbox();
     justify-content: space-between;
+    margin-top: 32px;
 }
 
 .header-top-lang {
@@ -161,7 +177,7 @@ h6 {
     display: block;
     line-height: 19px;
     color: #000;
-    font-size: 10px;
+    font-size: 14px;
     text-transform: uppercase;
     font-family: Bebas;
     letter-spacing: 1px;
@@ -180,4 +196,193 @@ h6 {
     text-decoration: underline;
     font-size: 15px;
     color: #000;
+}
+
+.header-bottom {
+    margin-top: -14px;
+    @include flexbox();
+    align-items: center;
+}
+
+.header-bottom__column {
+    flex: 0 0 33.333%;
+
+}
+
+.header-bottom-menu {
+    &--right {
+        .header-bottom-menu-list {
+            margin: 0;
+            text-align: right;
+            @include flexbox();
+            justify-content: flex-end;
+
+            li {
+                margin-left: 45px;
+
+                &:first-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+.header-bottom-menu-list {
+    @include flexbox();
+
+    li {
+        margin-right: 45px;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+
+.header-bottom-menu__link {
+    letter-spacing: 1.5px;
+    font-family: 'Akzidenz-Grotesk BQ';
+    color: #000;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.header-logo {
+    display: block;
+    text-align: center;
+}
+
+.header-logo__text {
+    display: block;
+    font-size: 10px;
+    font-family: "Bebas";
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+.header-logo__image {
+    display: inline-block;
+}
+
+.btn {
+    font-size: 15px;
+    font-family: "Bebas";
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 50px;
+    padding: 0 33px;
+    display: inline-block;
+    background-color: #000;
+    letter-spacing: 1.5px;
+    height: 50px;
+
+    &--w {
+        background-color: #fff;
+        color: #000;
+    }
+}
+
+
+.private {
+    @include flexbox();
+    background-color: #000;
+    margin-top: 30px;
+
+    &__column {
+        flex: 0 0 50%;
+
+        @media (max-width: 768px) {
+            flex: 0 0 100%;
+
+            &:first-child {
+                display: none;
+            }
+        }
+
+        .private-body {
+            padding: 75px 0 75px 60px;
+
+            @media (max-width: 992px) {
+                padding: 30px 20px 30px 30px;
+            }
+
+            .private-body-content {
+                max-width: 305px;
+
+                @media (max-width: 992px) {
+                    max-width: 225px;
+                }
+
+                &__title {
+                    font-size: 50px;
+                    font-family: "Akzidenz-Grotesk BQ";
+                    color: rgb(255, 255, 255);
+                    text-transform: uppercase;
+                    line-height: 1;
+                    text-align: left;
+                    letter-spacing: 5px;
+                    margin-bottom: 30px;
+
+                    @media (max-width: 992px) {
+                        font-size: 35px;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                &__text {
+                    font-size: 15px;
+                    font-family: 'PT Sans', sans-serif;
+                    color: rgb(255, 255, 255);
+                    line-height: 1.667;
+                    text-align: left;
+                    margin-bottom: 50px;
+
+                    @media (max-width: 992px) {
+                        margin-bottom: 30px;
+                    }
+                }
+
+                .private-body-buttons {
+                    @include flexbox();
+                    align-items: center;
+
+                    &__item {
+                        &--w {}
+
+                        &:hover {}
+
+                        &:active {}
+
+                        &:focus {}
+                    }
+
+                    &__link {
+                        font-family: 'Bebas';
+                        color: #fff;
+                        font-size: 15px;
+                        text-decoration: underline;
+                        margin-left: 15px;
+                        letter-spacing: 1.5px;
+
+                        &:hover {}
+
+                        &:active {}
+
+                        &:focus {}
+                    }
+                }
+            }
+        }
+
+        .private__image {
+            background-image: url('../img/private/01.jpg');
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-size: cover;
+        }
+    }
 }
