@@ -42,7 +42,8 @@
 }
 
 // Default font
-$fontfamily: "PTSans";
+$fontfamily: "PTSans",
+sans-serif;
 
 
 // Variables
@@ -488,4 +489,129 @@ h6 {
     text-transform: uppercase;
     line-height: 1.667;
     letter-spacing: 1.5px;
+}
+
+.why-top__image {
+    background-image: url('../img/why/01.jpg');
+    background-size: cover;
+    height: 100%;
+    background-repeat: no-repeat
+}
+
+.why-top {
+    @include flexbox();
+    background-color: #000;
+}
+
+.why-top__column {
+    flex: 0 0 50%;
+
+    @media (max-width: 992px) {
+        flex: 1 1 100%;
+
+        &:last-child {
+            display: none;
+        }
+    }
+}
+
+.why-top__text {
+    font-size: 50px;
+    font-family: "AkzidenzGroteskBQ";
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    line-height: 0.5;
+    letter-spacing: 5px;
+    text-align: right;
+    padding: 55px 60px 55px 0;
+
+    @media (max-width: 992px) {
+        padding: 30px 0;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    @media (max-width: 480px) {
+        padding: 20px 0;
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+.why-body {
+    background-color: #ebebeb;
+    padding-top: 50px;
+
+    @media (max-width: 480px) {
+        padding-top: 30px;
+    }
+}
+
+.why-body-row {
+    @include flexbox();
+    flex-wrap: wrap;
+}
+
+.why-body__column {
+    flex: 0 0 50%;
+    margin-bottom: 50px;
+
+    @media (max-width: 992px) {
+        flex: 1 1 100%;
+    }
+
+    @media (max-width: 480px) {
+        margin-bottom: 30px;
+    }
+
+}
+
+.why-body-item {
+    @include flexbox();
+}
+
+.why-body-item__icon {
+    flex: 0 0 100px;
+    height: 100px;
+    background-color: #000;
+    @include flexbox();
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 480px) {
+        flex: 0 0 80px;
+        height: 80px;
+        padding: 15px;
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.why-body-item-body {
+    flex: 1 1 100%;
+    padding-left: 11px;
+    @include flexbox();
+    flex-direction: column;
+}
+
+.why-body-item-body__title {
+    flex: 1 1 auto;
+    font-size: 25px;
+    font-family: "AkzidenzGroteskBQ";
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: left;
+    letter-spacing: 2.5px;
+
+    @media (max-width: 480px) {
+        font-size: 20px;
+    }
+}
+
+.why-body-item-body__text {
+    font-size: 15px;
+    line-height: 1.667;
+    padding-right: 15px;
 }
