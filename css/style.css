@@ -816,4 +816,55 @@ textarea {
   padding: 10px 18px;
 }
 
+.footer-body {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0;
+  height: 125px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+@media (max-width: 580px) {
+  .footer-body {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 0;
+  }
+}
+@media (max-width: 580px) {
+  .footer-body__column:first-child {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -ms-flex-order: 2;
+    -webkit-order: 2;
+    order: 2;
+  }
+  .footer-body__column:last-child {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -ms-flex-order: 1;
+    -webkit-order: 1;
+    order: 1;
+    margin-bottom: 15px;
+  }
+}
+.footer-body__column .footer__text {
+  font-size: 15px;
+  color: #4d4d4d;
+  line-height: 1.667;
+}
+.footer-body__column .footer__text a {
+  text-decoration: underline;
+  color: #7c7c7c;
+}
+@media (max-width: 580px) {
+  .footer-body__column {
+    text-align: center;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

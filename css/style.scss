@@ -10,6 +10,14 @@
     font-size: 0;
 }
 
+@mixin flexorder($val) {
+    -webkit-box-ordinal-group: $val;
+    -moz-box-ordinal-group: $val;
+    -ms-flex-order: $val;
+    -webkit-order: $val;
+    order: $val;
+}
+
 
 // Fonts
 @font-face {
@@ -284,7 +292,6 @@ h6 {
         color: #000;
     }
 }
-
 
 .private {
     @include flexbox();
@@ -751,8 +758,6 @@ textarea {
     font-size: 15px;
     color: #959595;
 
-    &.focus {}
-
     &.err {
         border: 2px solide red;
     }
@@ -762,4 +767,49 @@ textarea {
     height: 100px;
     resize: none;
     padding: 10px 18px;
+}
+
+// footer ====================
+
+
+.footer-body {
+    @include flexbox();
+    height: 125px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+
+    @media (max-width: 580px) {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+    }
+
+    &__column {
+        @media (max-width: 580px) {
+            &:first-child {
+                @include flexorder(2);
+            }
+
+            &:last-child {
+                @include flexorder(1);
+                margin-bottom: 15px;
+            }
+        }
+
+        .footer__text {
+            font-size: 15px;
+            color: rgb(77, 77, 77);
+            line-height: 1.667;
+
+            a {
+                text-decoration: underline;
+                color: #7c7c7c;
+            }
+        }
+
+        @media (max-width: 580px) {
+            text-align: center;
+        }
+    }
 }
