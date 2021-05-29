@@ -615,3 +615,151 @@ h6 {
     line-height: 1.667;
     padding-right: 15px;
 }
+
+//==================================
+.contacts {
+    padding-top: 80px;
+
+    @media (max-width: 768px) {
+        padding-top: 30px;
+    }
+}
+
+.contacts__title {
+    font-size: 50px;
+    font-family: "AkzidenzGroteskBQ";
+    text-transform: uppercase;
+    line-height: 0.5;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+}
+
+.contacts-body {
+    @include flexbox();
+    flex-wrap: wrap;
+}
+
+.contacts-body__column {
+    flex: 0 0 50%;
+    margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+        flex: 1 1 100%;
+    }
+}
+
+.contacts-body__item {
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    line-height: 1.667;
+    padding-left: 35px;
+    display: inline-block;
+}
+
+.contacts-body__item--1 {
+    background: url('../img/contacts/location.svg') left no-repeat;
+}
+
+.contacts-body__item--2 {
+    background: url('../img/contacts/email.svg') left no-repeat;
+}
+
+.contacts-body__item--3 {
+    background: url('../img/contacts/telephone.svg') left no-repeat;
+}
+
+.contacts-social {
+    @include flexbox();
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.contacts-social__item {
+    margin-right: 30px;
+}
+
+.contacts-content {
+    @include flexbox();
+    background-color: #000;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
+}
+
+.contacts-content__column {
+    flex: 0 0 50%;
+}
+
+.contacts-content__map {
+    height: 100%;
+
+    @media (max-width: 768px) {
+        height: 300px;
+    }
+}
+
+.contacts-content-form {
+    padding: 55px 60px;
+
+    @media (max-width: 768px) {
+        padding: 30px;
+    }
+}
+
+.contacts-content-form__title {
+    font-size: 25px;
+    font-family: "AkzidenzGroteskBQ";
+    text-transform: uppercase;
+    line-height: 0.5;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.contacts-content-form-body {
+    max-width: 375px;
+
+    @media (max-width: 768px) {
+        max-width: none;
+    }
+}
+
+.contacts-content-form-line {
+    margin-bottom: 25px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.input {
+    border-radius: none !important;
+    width: 100%;
+    height: 50px;
+    display: block;
+    padding: 0 18px;
+    border: 2px solid #959595;
+    background-color: #252525;
+    font-size: 15px;
+    color: #959595;
+
+    &.focus {}
+
+    &.err {
+        border: 2px solide red;
+    }
+}
+
+.textarea {
+    height: 100px;
+    resize: none;
+    padding: 10px 18px;
+}
