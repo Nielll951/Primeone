@@ -159,11 +159,85 @@ h6 {
     font-weight: 400;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+
+    header {
+        max-height: 44px;
+
+        @media (max-width: 480px) {
+            max-height: 35px;
+        }
+    }
+
+    .header-bottom__column:first-child {
+        display: none;
+    }
+
+    .header-bottom__column:last-child {
+        display: none;
+    }
+
+    .header-bottom {
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-logo__image img {
+        width: 130px;
+    }
+
+    .header-top-lang {
+        left: -160px;
+        position: relative;
+    }
+
     .header-bottom-menu-list li {
         margin-right: 35px;
     }
+
+    .menu-burger__header {
+        position: relative;
+        width: 35px;
+        height: 35px;
+        display: block;
+        margin-left: 10px;
+        top: -19px;
+
+        @media (max-width: 480px) {
+            top: -13px;
+        }
+    }
+
+    .menu-burger__header span,
+    .menu-burger__header::after,
+    .menu-burger__header::before {
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        background: #515758;
+        margin: 0 auto;
+    }
+
+    .menu-burger__header span {
+        top: 21px;
+    }
+
+    .menu-burger__header::after,
+    .menu-burger__header::before {
+        content: '';
+    }
+
+    .menu-burger__header::after {
+        bottom: 3px;
+    }
+
+    .menu-burger__header::before {
+        top: 13px;
+    }
 }
+
+
+
 
 .container {
     max-width: $mw;
@@ -176,6 +250,11 @@ h6 {
     @include flexbox();
     justify-content: space-between;
     margin-top: 32px;
+
+    @media (max-width: 768px) {
+        padding-top: 15px;
+        margin-top: 16px;
+    }
 }
 
 .header-top-lang {
@@ -205,12 +284,25 @@ h6 {
     text-decoration: underline;
     font-size: 15px;
     color: #000;
+
+    @media (max-width: 768px) {
+        margin-top: 5px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 13px;
+        margin-top: 3px;
+    }
 }
 
 .header-bottom {
     margin-top: -14px;
     @include flexbox();
     align-items: center;
+
+    @media (max-width: 768px) {
+        margin: -40px;
+    }
 }
 
 .header-bottom__column {
@@ -269,10 +361,26 @@ h6 {
     color: rgb(0, 0, 0);
     text-transform: uppercase;
     letter-spacing: 8px;
+
+    @media (max-width: 768px) {
+        font-size: 8px;
+    }
+
+    @media (max-width: 480px) {
+        letter-spacing: 5px;
+    }
 }
 
 .header-logo__image {
     display: inline-block;
+
+    @media (max-width: 480px) {
+        margin: 0 0 2px 0;
+
+        img {
+            width: 100px;
+        }
+    }
 }
 
 .btn {
@@ -786,6 +894,12 @@ textarea {
     }
 
     &__column {
+        .footer__logo img {
+            @media (max-width: 480px) {
+                width: 150px;
+            }
+        }
+
         @media (max-width: 580px) {
             &:first-child {
                 @include flexorder(2);
@@ -793,7 +907,7 @@ textarea {
 
             &:last-child {
                 @include flexorder(1);
-                margin-bottom: 15px;
+                margin-bottom: 4px;
             }
         }
 
