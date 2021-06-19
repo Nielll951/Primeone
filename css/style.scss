@@ -869,6 +869,10 @@ h6 {
     margin-right: 30px;
 }
 
+.contacts-social__item img:hover {
+    opacity: 0.7;
+}
+
 .contacts-content {
     @include flexbox();
     background-color: #000;
