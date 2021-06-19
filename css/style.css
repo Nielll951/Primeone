@@ -410,6 +410,10 @@ h6 {
   font-size: 15px;
 }
 
+.header-bottom-menu__link:hover {
+  text-decoration: underline;
+}
+
 .header-logo {
   display: block;
   text-align: center;
@@ -461,6 +465,13 @@ h6 {
 .btn--w {
   background-color: #fff;
   color: #000;
+}
+.btn--w:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.btn--b:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .private {

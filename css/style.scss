@@ -53,13 +53,15 @@
 $fontfamily: "PTSans",
 sans-serif;
 
-
 // Variables
 $minwidth: 320px;
 $mw: 880px;
+$md1: $mw+12;
+$md2: 992.98;
+$md3: 767.98;
+$md4: 479.98;
 
 // Обнуление стилей
-
 * {
     padding: 0;
     margin: 0;
@@ -409,6 +411,10 @@ h6 {
     font-size: 15px;
 }
 
+.header-bottom-menu__link:hover {
+    text-decoration: underline;
+}
+
 .header-logo {
     display: block;
     text-align: center;
@@ -459,6 +465,14 @@ h6 {
         background-color: #fff;
         color: #000;
     }
+
+    &--w:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+}
+
+.btn--b:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .private {
